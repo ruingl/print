@@ -39,7 +39,7 @@ export class Bprint {
   public async print(text: string): Promise<void> {
     const lines = text.split('\n');
     const maxLen = Math.max(...lines.map(line => line.length));
-    const border = this.char.repeat(maxLen);
+    const border = this.char.repeat(maxLen + 4);
 
     await this.slowPrint(border);
 

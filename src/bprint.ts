@@ -44,7 +44,9 @@ export class Bprint {
     await this.slowPrint(border);
 
     for (const line of lines) {
-      await this.slowPrint(`* ${line.padEnd(maxLen)} *`);
+      await this.slowPrint(
+        `${this.char} ${line.padEnd(maxLen)} ${this.char}`
+      );
     }
 
     await this.slowPrint(border);

@@ -1,5 +1,5 @@
 /*!
- * bprint (0.0.4)
+ * bprint
  * made with <3 by rui reogo
  * licensed with mit
  */

@@ -11,9 +11,9 @@ export class Bprint {
    * Better print's constructor
    * @param options - Options object.
    */
-  constructor(options: Options) {
-    this.char = options.char || '*';
-    this.msDelay = options.msDelay || 100;
+  constructor(options?: Options) {
+    this.char = options?.char || '*';
+    this.msDelay = options?.msDelay || 100;
   }
 
   /**
@@ -39,7 +39,7 @@ export class Bprint {
   public async print(text: string): Promise<void> {
     const lines = text.split('\n');
     const maxLen = Math.max(...lines.map(line => line.length));
-    const border = '*'.repeat(maxLen);
+    const border = this.char.repeat(maxLen);
 
     await this.slowPrint(border);
 
